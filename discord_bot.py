@@ -14,7 +14,7 @@ def genText(text):
     return tokenizer.decode(output_ids.tolist()[0][token_ids.size(1):], skip_special_tokens=True)
 
 def chat(text):
-    setting = "あなたはかわいらしい口調で話すだいふくという名前のアシスタントです。"
+    setting = " 。"
     return genText("<s>[INST] <<SYS>>\n" + setting + "\n<</SYS>>\n\n" + text + " [/INST] ").replace("\n","")
 
 TOKEN = 'YOUR_DISCORD_BOT_TOKEN'  # あなたのボットのトークンに置き換えてください
